@@ -1,0 +1,155 @@
+In [5]:
+import sys
+
+def non_negative(n):
+    if n >= 0:
+        return True
+    else:
+        sys.exit("Invalid value")
+        
+def factorial(n):
+    non_negative(n)
+    n1 = n
+    n2 = n
+    while n1>1:
+        n2 = n2*(n1-1)
+        n1 -=1
+    print("the factorial of {} is {}".format(n,n2))
+
+n = int(input("Enter Number: "))
+#non_negative(n)
+factorial(n)
+Enter Number: 6
+the factorial of 6 is 720
+In [17]:
+def upperlower(string):
+    upper = 0
+    lower = 0
+    for i in string:
+        if i.isupper():
+            upper +=1
+        else:
+            lower +=1
+    print("Upper case characters are {} and Lower case characters are {}".format(upper,lower))
+    
+
+string = input("Enter String: ")
+upperlower(string)
+Enter String: HeLLo
+Upper case characters are 3 and Lower case characters are 2
+In [16]:
+def even(a):
+    for i in a:
+        if i%2 == 0:
+            print("{} is even number".format(i))
+    
+
+a = [2,3,4,5,6,7,8,9,0,1]
+even(a)
+2 is even number
+4 is even number
+6 is even number
+8 is even number
+0 is even number
+In [21]:
+def palindrome(a):
+    if a == a[::-1]:
+        print("It is a palindrome")
+    else:
+        print("It is not a palindrome")
+        
+a = input()
+palindrome(a)
+madam
+It is a palindrome
+In [15]:
+def primenumber(num):
+    count = 0
+    if num == 2:
+        print(num,"is a prime number")
+    elif num == 1:
+        print(num,"is not a prime number")
+    elif num > 1:
+        for i in range(2,num+1):
+            if (num%i)==0:
+                count +=1
+    if count == 1:
+        print(num,"is a prime number")
+    else:
+        print(num,"is not a prime number")
+
+num = int(input())
+primenumber(num)
+8
+8 is not a prime number
+In [16]:
+#Extra
+
+def primenumber(num):
+    if num == 2:
+        print(num,"is a prime number")
+    elif num == 1:
+        print(num,"is not a prime number")
+    elif num > 1:
+        for i in range(2,num):
+            if (num%i)==0:
+                print(num,"is not a prime number")
+                break
+            else:
+                print(num,"is a prime number")
+                break
+                
+                
+        
+    
+num = int(input())
+primenumber(num)
+7
+7 is a prime number
+In [63]:
+def shopping(*list):
+    for i in list:
+        print(i)
+
+shopping("banana","cake","pepsi","tomato","rice","biryani masala","potato","meat")
+banana
+cake
+pepsi
+tomato
+rice
+biryani masala
+potato
+meat
+In [60]:
+#Extra
+
+def chk(b):
+    try:
+        int(b)
+        return True
+    except ValueError:
+        return False
+
+b = input()
+chk(b)
+89
+Out[60]:
+True
+In [11]:
+#Extra
+
+a = "madam"
+for i in a[1:4:-1]:
+    print(i)
+    
+a[::-1]
+Out[11]:
+'madam'
+In [21]:
+#Extra
+
+"hello".isupper()
+Out[21]:
+False
+In [ ]:
+

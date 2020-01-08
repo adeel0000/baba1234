@@ -1,0 +1,139 @@
+
+Q1: Define Object Oriented Programming Language?
+Ans: Object Oriented Programming:
+One of the most powerful and popular paradigms.¶
+Includes facilities for modular programming, and (in some sense) procedural programming.
+A program consists of a collection of cooperating objects rather than a list of instructions (actions).
+An object combines data structure and its related operations together.
+Q2: List down the Benefits of OOP?
+Ans: BENEFITS OF OOP
+Reduced cognitive load (have less to think about and more natural paradigm)
+Isolation of programmers (better team programming)
+Less propagation of errors more adaptable/flexible programs
+Faster development due to reuse of code
+Q3: Differentiate between function and method?
+Ans: Difference between function and method:
+Function:
+A program that provides some functionality can be long and contains many statements
+Method:
+A method groups a sequence of statements and shouldprovide a well-defined, easy-to-understand functionality
+a method takes input, performs actions, and produces output
+Define the following terms:
+1. Class
+2. Object
+3. Attribute
+4. Behavior
+1. Class:
+In programming: a pattern, blueprint, or template for modeling real world objects which have similar attributes.
+2. Object:
+Objects are the basic run-time entities of an object orientedsystem.
+They may represent a person, a place or any item that the program must handle.
+3. Attribute:
+A given set of data which describes the object.
+e.g., colour, size, amount, name, phoneNumber, etc.
+Behavior:
+A given set of data which describes the object.
+e.g., colour, size, amount, name, phoneNumber, etc.
+In [67]:
+class Car():
+    #model = "Civic 2019"
+    #color = "Red"
+    #name = "Honda"
+    #owner = "Ovais"
+    #registration_number = "king001"
+    
+    def __init__(self, model,color,name,owner,registration_number):
+        self.model = model
+        self.color = color
+        self.name = name
+        self.owner = owner
+        self.registration_number = registration_number
+        
+    def update_owner(self,new_owner):
+        self.owner = new_owner
+        
+    def delete(self):
+        self.model = None
+        self.color = None
+        self.name = None
+        self.owner = None
+        self.registration_number = None
+    
+    def check(self,new_registration_number,new_model,new_name):
+        if self.registration_number == new_registration_number and self.model == new_model and self.name == new_name:
+            print("Same Car")
+        else:
+            print("New Car")
+        
+    
+
+first = Car("Civic 2019","Red","Honda","Ovais","king001")
+print("Object:", first.model,first.color,first.name,first.owner,first.registration_number)  
+second = first.update_owner("Ovais ur Rehman")
+print("Updated Object:", first.model,first.color,first.name,first.owner,first.registration_number)  
+third = first.check(new_registration_number="king001",new_model= "Civic 2020",new_name="Honda")
+
+first1 = Car("Margala 2000","Red","Toyota","Fawad","ala-220")
+print("Object:", first1.model,first1.color,first1.name,first1.owner,first1.registration_number)  
+second1 = first1.update_owner("Ovais ur Rehman")
+print("Updated Object:", first1.model,first1.color,first1.name,first1.owner,first1.registration_number)  
+third1 = first1.check(new_registration_number="king001",new_model= "Margala 2000",new_name="Toyota")
+
+first2 = Car("Vigo","Red","Toyota","Ali","AWD-590")
+print("Object:", first2.model,first2.color,first2.name,first2.owner,first2.registration_number)  
+second2 = first2.update_owner("Ovais ur Rehman")
+print("Updated Object:", first2.model,first2.color,first2.name,first2.owner,first2.registration_number)  
+third2 = first1.check(new_registration_number="king001",new_model= "Vigo",new_name="Toyota")
+
+first3 = Car("Hilux","Black","Toyota","Usama","ADD-590")
+print("Object:", first3.model,first3.color,first3.name,first3.owner,first3.registration_number)  
+second3 = first3.update_owner("Ovais ur Rehman")
+print("Updated Object:", first3.model,first3.color,first3.name,first3.owner,first3.registration_number)  
+third3 = first3.check(new_registration_number="ADD-590",new_model= "Hilux",new_name="Toyota")
+
+first4 = Car("Hilux 2020","Black","Toyota","Abba","APD-590")
+print("Object:", first4.model,first4.color,first4.name,first4.owner,first4.registration_number)  
+second4 = first4.update_owner("Ovais ur Rehman")
+print("Updated Object:", first3.model,first3.color,first3.name,first3.owner,first3.registration_number)  
+third4 = first4.check(new_registration_number="APD-590",new_model= "Hilux 2020",new_name="Toyota")
+
+
+
+
+#print(first.color)  
+
+        
+fourth = first.delete()
+fourth1 = first1.delete()
+fourth2 = first2.delete()
+fourth3 = first3.delete()
+fourth4 = first4.delete()
+
+
+print("Deleted Object 1:", first.model,first.color,first.name,first.owner,first.registration_number)  
+print("Deleted Object 2:", first1.model,first1.color,first1.name,first1.owner,first1.registration_number)
+print("Deleted Object 3:", first2.model,first2.color,first2.name,first2.owner,first2.registration_number)
+print("Deleted Object 4:", first3.model,first3.color,first3.name,first3.owner,first3.registration_number)
+print("Deleted Object 4:", first4.model,first4.color,first4.name,first4.owner,first4.registration_number)
+Object: Civic 2019 Red Honda Ovais king001
+Updated Object: Civic 2019 Red Honda Ovais ur Rehman king001
+New Car
+Object: Margala 2000 Red Toyota Fawad ala-220
+Updated Object: Margala 2000 Red Toyota Ovais ur Rehman ala-220
+New Car
+Object: Vigo Red Toyota Ali AWD-590
+Updated Object: Vigo Red Toyota Ovais ur Rehman AWD-590
+New Car
+Object: Hilux Black Toyota Usama ADD-590
+Updated Object: Hilux Black Toyota Ovais ur Rehman ADD-590
+Same Car
+Object: Hilux 2020 Black Toyota Abba APD-590
+Updated Object: Hilux Black Toyota Ovais ur Rehman ADD-590
+Same Car
+Deleted Object 1: None None None None None
+Deleted Object 2: None None None None None
+Deleted Object 3: None None None None None
+Deleted Object 4: None None None None None
+Deleted Object 4: None None None None None
+In [ ]:
+
